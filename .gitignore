@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Virtual Environment
+
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment Variables
+.env
+
+# Database
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# Runtime Storage
+storage/uploads/*
+!storage/uploads/.gitkeep
+
+storage/corpus/*
+!storage/corpus/.gitkeep
+
+storage/reports/*
+!storage/reports/.gitkeep
+
+storage/faiss_index/*
+!storage/faiss_index/.gitkeep
+
+# Operating System
+.DS_Store
+Thumbs.db
