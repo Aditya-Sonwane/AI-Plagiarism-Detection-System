@@ -128,7 +128,7 @@ Clone the repository.
 ```bash
 git clone https://github.com/Aditya-Sonwane/AI-Plagiarism-Detection-System.git
 
-cd AI_Plagiarism_Detector
+cd AI-Plagiarism-Detection-System
 ```
 
 Install dependencies.
