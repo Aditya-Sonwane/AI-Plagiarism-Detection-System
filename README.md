@@ -88,7 +88,7 @@ PDF Report & Dashboard
 ## Project Structure
 
 ```
-AI_Plagiarism_Detector/
+AI-Plagiarism-Detection-System/
 │
 ├── backend/
 │   ├── api/
