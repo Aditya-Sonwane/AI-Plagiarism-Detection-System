@@ -173,9 +173,10 @@ class ReportService:
 
             pdf.set_font("Helvetica", "B", 9)
             pdf.set_text_color(*color)
+            pdf.set_x(pdf.l_margin)
             pdf.multi_cell(
-                0,
-                5,
+                pdf.epw,
+                6,
                 f"[{match.classification}] confidence={match.confidence_score:.2f}  "
                 f"similarity={match.similarity_score:.2f}",
             )
@@ -183,10 +184,12 @@ class ReportService:
             pdf.set_text_color(0, 0, 0)
 
             pdf.set_font("Helvetica", "", 9)
+            pdf.set_x(pdf.l_margin)
             pdf.multi_cell(0, 5, f"Query: {match.query_sentence}")
 
             if match.matched_text:
                 pdf.set_font("Helvetica", "I", 9)
+                pdf.set_x(pdf.l_margin)
                 pdf.multi_cell(0, 5, f"Matched: {match.matched_text}")
 
             pdf.set_font("Helvetica", "", 8)
@@ -197,12 +200,13 @@ class ReportService:
                 if match.source_page_number is not None
                 else "N/A"
             )
-
+            pdf.set_x(pdf.l_margin)
             pdf.multi_cell(0, 5, f"Source: {source} (page {page})")
 
             if match.reason:
                 pdf.set_font("Helvetica", "", 8)
                 pdf.set_text_color(90, 90, 90)
+                pdf.set_x(pdf.l_margin)
                 pdf.multi_cell(0, 5, f"Reason: {match.reason}")
                 pdf.set_text_color(0, 0, 0)
 
